@@ -1,0 +1,35 @@
+#no-mobile span,
+#no-smallscreen span {
+  display: block;
+}
+#no-mobile,
+#no-smallscreen {
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  height: 100vh;
+  width: 100vw;
+  background-color: #bd9bc0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  font-family: "Faster One", cursive;
+}
+
+#no-smallscreen {
+  font-size: 40px;
+}
+
+@media screen and (max-width: 580px) {
+  #no-mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  #no-smallscreen {
+    display: none;
+  }
+}

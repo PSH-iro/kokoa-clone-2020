@@ -1,0 +1,51 @@
+#settings-screen .status-bar {
+  z-index: 2;
+}
+#settings-screen .alt-header {
+  z-index: 1;
+}
+.setting-list {
+  padding: 0 15px;
+}
+.settings__setting {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings__setting i {
+  opacity: 0.8;
+  margin-right: 22px;
+  font-size: 22px;
+}
+.settings__setting:nth-child(3) {
+  padding-bottom: 40px;
+}
+.settings__setting:nth-child(4) {
+  padding-top: 40px;
+}
+
+@keyframes SettingAlert {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.settings__setting:last-child i,
+.settings__setting:last-child span {
+  color: tomato;
+  animation: SettingAlert 1s ease-in-out infinite;
+}
+
+.settings__setting-column:last-child {
+  opacity: 0.5;
+}
